@@ -2,7 +2,7 @@ import {useState,useEffect} from "react"
 import { CONSULTATION_MODES, CONSULTATION_SERVICES, TIME_SLOT } from "../data/ConsultationData"
 import { InputField } from "./InputField"
 
-import axios from "axios"
+
 import {Check} from "lucide-react"
 
 
