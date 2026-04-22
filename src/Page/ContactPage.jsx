@@ -22,7 +22,7 @@ export function ContactPage (){
     }, 1200);
   };
 
-  const WHATSAPP_NUMBER = "18001234567"; // ← replace with your number (no + or spaces)
+  const WHATSAPP_NUMBER = "27710836571"; // ← replace with your number (no + or spaces)
   const WHATSAPP_MSG = encodeURIComponent("Hi! I'd like to get in touch.");
 
   return (
