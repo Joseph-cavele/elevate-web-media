@@ -12,7 +12,7 @@ const mission =[
 ]
 
     return (
-        <section className="min-h-screen bg-white py-20  px-6">
+        <section className="min-h-screen font-OpenSans bg-white py-20  px-6">
             {/*left-content  */}
             <div className="max-w-6xl mx-auto ">
                 <div className="mb-10">
@@ -34,10 +34,10 @@ const mission =[
                 </div>
                 <div className="flex flex-col md:flex-row gap-6">
                  <div className="md:w-1/2 rounded overflow-hidden min-h-64 relative">
-                      <img src={AboutImage}/>
+                      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1400&q=80"/>
                 </div> 
 
-                <div className="md:w-1/2 flex flex-col h-full">
+                <div className="md:w-1/2 flex flex-col h-93">
                 {   mission.map((mission)=>(
                     <div
                     key={mission.num}

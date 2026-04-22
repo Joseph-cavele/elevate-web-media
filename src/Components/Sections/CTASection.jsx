@@ -6,9 +6,9 @@ export function  CtaSection(){
     const Image="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=300&q=80"
 
     return (
-        <div className="min-h-screen bg-white flex items-center justify-center p-8">
+        <div className="min-h-screen bg-white  font-OpenSans flex items-center justify-center p-8">
         <div className="flex flex-col md:flex-row gap-5 mx-auto w-full max-w-6xl "> 
-          <div className="flex-[1.4] bg-blue-800 rounded p-7 flex flex-col gap-5 relative overflow-hidden ">
+          <div className="flex-[1.4] bg-blue-900 rounded p-7 flex flex-col gap-5 relative overflow-hidden ">
            <div className="absolute -top-16 -right-16 w-60 h-60 rounded-full bg-blue-800 opacity-10 blur-3xl pointer-events-none"/> 
            <div className="flex gap-4 items-start  ">
             <div className="  md:w-60 md:h-60 h-40 w-30 rounded-xl shrink-0 overflow-hidden">
@@ -20,10 +20,10 @@ export function  CtaSection(){
 
             </div>
             <div className="flex flex-col gap-2 ">
-             <h2 className="font-bold font-poppins text-white text-[17px] leading-snug md:not-first:mt-10">
+             <h2 className="font-bold  text-white text-[17px] leading-snug md:not-first:mt-10">
                Maximize Your Growth with Our Expert Digital Marketing 
             </h2>  
-             <p className="text-white/50 text-[12px] leading-relaxed">
+             <p className="text-gray-800 text-[12px] leading-relaxed">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates 
                 temporibus quisquam pariatur. Ab vero atque beatae aliquid 
             

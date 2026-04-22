@@ -13,7 +13,7 @@ import {Link} from "react-router-dom"
     
 export  function Hero() {
   return (
-    <div className="min-h-screen bg-white flex items-center">
+    <div className="min-h-screen bg-white font-OpenSans flex items-center">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
         

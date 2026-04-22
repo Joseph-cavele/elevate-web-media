@@ -137,10 +137,10 @@ export default function ContactForm() {
           <div className="lg:col-span-2 flex flex-col gap-6">
 
             {/* Info card */}
-            <div className="bg-blue-900 rounded-2xl p-7 flex flex-col gap-5">
+            <div className=" bg-blue-800 rounded-2xl p-7 flex flex-col gap-5">
               <div>
                 <p className="text-white font-bold text-lg mb-1">Let's talk</p>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   Reach out through any channel. We're always happy to hear from you.
                 </p>
               </div>
