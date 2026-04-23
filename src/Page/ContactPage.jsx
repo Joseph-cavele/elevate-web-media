@@ -2,19 +2,52 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Send, MessageCircle, Calendar, ChevronRight } from "lucide-react";
 import { CONTACT_CARDS } from "../data/ContactData";
+import { THANK_YOU_EMAIL_API } from "../Api/ThankyouEmail";
 
 export function ContactPage (){
 
-             const [form, setForm] = useState({ name: "", email: "", message: "" });
+             const [form, setForm] = useState({ firstname: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error,SetError]=useState({})
 
   const handleChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!form.name || !form.email || !form.message) return;
+  const handleSubmit = async(e) => {
+      e.preventDefault();
+
+
+    try {
+      const res=await fetch(THANK_YOU_EMAIL_API,{
+        method:"POST",
+        headers:{"Content-Type" :"application/json"},
+        body:JSON.stringify(form)
+      })
+      const data=await res.json()
+      if(!res.ok){
+
+        SetError({
+           general: data.errors ? data.errors.join(", ") : data.message,
+        })
+
+        return;
+
+        
+
+      }
+      setSent(true)
+      
+      
+    } catch (error) {
+      console.error(`Failed to post data ${error}` )
+      
+    }finally{
+      setLoading(false)
+    }
+
+  
+    if (!form.firstname || !form.email || !form.message) return;
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -141,7 +174,7 @@ export function ContactPage (){
                   Thanks for reaching out. We'll get back to you within one business day.
                 </p>
                 <button
-                  onClick={() => { setSent(false); setForm({ name: "", email: "", message: "" }); }}
+                  onClick={() => { setSent(false); setForm({ firstname: "", email: "", message: "" }); }}
                   className="mt-2 text-blue-600 text-sm font-medium hover:underline"
                 >
                   Send another message
@@ -156,8 +189,8 @@ export function ContactPage (){
                   </label>
                   <input
                     type="text"
-                    name="name"
-                    value={form.name}
+                    name="firstname"
+                    value={form.firstname}
                     onChange={handleChange}
                     placeholder="John Smith"
                     required

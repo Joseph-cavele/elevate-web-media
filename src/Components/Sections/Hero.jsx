@@ -6,6 +6,7 @@ import { C } from "../../Style/color"
 import HeroImage from  "../../assets/Images/hero-bg.png"
 import { MarketingCards } from "../MarketingCards"
 import {Link} from "react-router-dom"
+import { THANK_YOU_EMAIL_API } from "../../Api/ThankyouEmail"
           
 
 

@@ -1,7 +1,7 @@
 
 
 import { useState } from "react";
-
+import { THANK_YOU_EMAIL_API } from "../../Api/ThankyouEmail";
 /* ── Icons ─────────────────────────────────────────────────── */
 const FbIcon = () => (
   <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
@@ -95,7 +95,34 @@ export default function ContactForm() {
     return e;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
+
+    try {
+      const res=await fetch(THANK_YOU_EMAIL_API,{
+        method:"POST",
+        headers:{"Content-Type" :"application/json"},
+        body:JSON.stringify(form)
+        
+      })
+       const data=await res.json()
+      if(!res.ok){
+        setErrors({
+           general: data.errors ? data.errors.join(", ") : data.message,
+        })
+        return;
+      }
+
+      setSubmitted(true)
+     
+    
+      
+    } catch (error) {
+      console.error(`Failed to submit data ${error}`)
+
+      
+    }finally{
+      setLoading(false)
+    }
     const e = validate();
     if (Object.keys(e).length) { setErrors(e); return; }
     setErrors({});
@@ -174,7 +201,7 @@ export default function ContactForm() {
 
               {/* WhatsApp button */}
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/27710836571"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm px-5 py-3 rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-green-900/30"
