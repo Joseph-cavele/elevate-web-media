@@ -108,6 +108,7 @@ export default function ProjectInquiry() {
         });
         return;
       }
+      console.log(data)
       setSubmitted(true);
     } catch {
       setErrors({ general: "Something went wrong. Please try again." });
