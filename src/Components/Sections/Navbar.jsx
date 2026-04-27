@@ -1,12 +1,13 @@
 import { C } from "../../Style/color";
 import { useState } from "react";
-import logo from "../../assets/logo.png";
+
 import { NAV_LINK } from "../../data/NavLink";
 import { NavLink } from "react-router-dom";
 import { BtnOline } from "../ui/BtnOuline";
 import { BtnPrimary } from "../ui/BtnPrimary";
 import { Menu, X } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
+
 
 const PROTECTED_ROUTES = ["/about", "/services", "/contact"];
 
@@ -39,7 +40,7 @@ export function Navbar() {
                         style={{ background: C.cta }}
                         className="w-15 h-15 rounded-xl flex items-center justify-center"
                     >
-                        <img src={logo} width={80} alt="caveledigital logo" />
+                        <img src="/logo.png" width={80} alt="caveledigital logo" />
                     </div>
 
                     <div className="space-x-2.5">

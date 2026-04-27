@@ -1,6 +1,6 @@
-import AboutImage from "../../assets/Images/hero-bg1.png"
+
 import { C } from "../../Style/color"
-import JosephImage from "../../assets/Images/hero-bg.png"
+
 export function AboutUs(){
 
     
