@@ -70,8 +70,17 @@ export function  CtaSection(){
 
         </div> 
             <p className="text-gray-400 text-[12.5px] leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam unde ut laborum iure eligendi,
-             iste dicta tempore ad dignissimos nostrum veritatis est aperia
+                  In today's fast-paced digital world, standing out from the
+                  
+   competition takes more than just a great product — it takes
+   
+    the right strategy, the right message, and the right team 
+    behind you.
+     
+            
+
+  
+     
           </p>
             {/* Metrics */}
         <div style={{background:C.cta}} className="mt-auto grid grid-cols-3 rounded overflow-hidden">

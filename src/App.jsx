@@ -15,6 +15,7 @@ import ContactForm from './Components/Sections/Contact';
 import { ContactPage } from './Page/ContactPage';
 import reactGA from "react-ga4"
 import { useEffect } from 'react';
+import { Notfound } from './Components/Sections/NotFound';
 
 
  function App() {
@@ -35,7 +36,7 @@ import { useEffect } from 'react';
   return (
 
     <BrowserRouter>
-    <GATracker/>
+    
     <TopBar/>
     <Navbar/>
     
@@ -46,6 +47,7 @@ import { useEffect } from 'react';
       <Route path='/services' element={<ProtectedRoute><OurServices/></ProtectedRoute>}/>
       <Route path='/consultation' element={<ProtectedRoute><ConsultationForm/></ProtectedRoute>}/>
       <Route path='/projectinquiry' element={<ProjectInquiry/>}/>
+      
 
     </Routes>
     

@@ -26,8 +26,20 @@ export function Achievement(){
                 <h2  className="text-2xl md:text-3xl  mx-auto p-8 mt-6 font-semibold  font-OpenSans  text-center">
                 Proven Success in Driving Business Growth
                 </h2> 
-                <p style={{color:C.p}} className="text-center p-8 mt-6 leading-relaxed font-OpenSans">vero! Quos rerum quasi 
-                    perspiciatis. Nobis, facilis culpa tenetur beatae<br/> laudantium quae maxime perspiciatis.</p>
+                <p style={{color:C.p}} className="text-center p-8 mt-6 leading-relaxed font-OpenSans">
+                                 Over the years, we have proudly partnered with hundreds of 
+  businesses across diverse industries, delivering campaigns that
+   have generated millions in revenue, doubled website traffic, and built
+    brands that people truly trust. Our<br/> data-driven approach has earned us
+     recognition as a leading digital marketing agency, with a proven track record
+      of turning ambitious goals into remarkable results. Every milestone we reach is a
+       reflection of our clients' success —<br/> and that is what drives us every single day.
+
+                
+ 
+                    
+                    
+                    </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-5 relative  p-8">
                   {
