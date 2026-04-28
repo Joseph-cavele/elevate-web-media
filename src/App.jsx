@@ -1,5 +1,5 @@
 import './App.css'
-import {BrowserRouter,Routes,Route} from "react-router-dom"
+import {BrowserRouter,Routes,Route,useLocation} from "react-router-dom"
 
 
 import { HomePage } from './Page/Home';
@@ -13,14 +13,29 @@ import { ProtectedRoute } from './Components/ProtectedRoute';
 import ProjectInquiry from './Forms/ProjectInquiryForm';
 import ContactForm from './Components/Sections/Contact';
 import { ContactPage } from './Page/ContactPage';
+import reactGA from "react-ga4"
+import { useEffect } from 'react';
 
 
  function App() {
+    function GATracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.gtag('config', 'G-Y5V6EH80SK', {
+      page_path: location.pathname,
+    });
+  }, [location]);
+
+  return null;
+}
+
   
 
   return (
 
     <BrowserRouter>
+    <GATracker/>
     <TopBar/>
     <Navbar/>
     
