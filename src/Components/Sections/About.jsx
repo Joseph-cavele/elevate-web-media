@@ -25,7 +25,7 @@ const mission =[
                 </div> 
                 <div className=" flex md:whitespace-nowrap flex-col font-poppins md:flex-row md:items-start   md:gap-12 leading-snug md:w-1/2">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 ">Maximize Your Growth with Our<br/> Digital Marketing</h2>
-                    <p className="text-gray-500 font-OpenSans md:whitespace-nowrap text-sm leading-relax md:w-1/2 mt-4 md:mt-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br/> 
+                    <p className="text-gray-500 font-OpenSans md:whitespace-nowrap text-sm leading-relax md:w-1/2 mt-4 md:mt-1">
                         Smart strategies. Real results. Let's take your business to the next level together.
                      </p>   
                         
