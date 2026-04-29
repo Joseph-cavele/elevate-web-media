@@ -13,23 +13,13 @@ import { ProtectedRoute } from './Components/ProtectedRoute';
 import ProjectInquiry from './Forms/ProjectInquiryForm';
 import ContactForm from './Components/Sections/Contact';
 import { ContactPage } from './Page/ContactPage';
-import reactGA from "react-ga4"
+
 import { useEffect } from 'react';
 import { Notfound } from './Components/Sections/NotFound';
 
 
  function App() {
-    function GATracker() {
-  const location = useLocation();
-
-  useEffect(() => {
-    window.gtag('config', 'G-Y5V6EH80SK', {
-      page_path: location.pathname,
-    });
-  }, [location]);
-
-  return null;
-}
+    
 
   
 
