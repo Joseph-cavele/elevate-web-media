@@ -98,7 +98,7 @@ export default function ContactForm() {
   const handleSubmit = async() => {
 
     try {
-      const res=await fetch(THANK_YOU_EMAIL_API,{
+      const res=await fetch("https://hook.us2.make.com/trdpx9hjwyjy3fjr1nli1lsfxbv3kiwo",{
         method:"POST",
         headers:{"Content-Type" :"application/json"},
         body:JSON.stringify(form)

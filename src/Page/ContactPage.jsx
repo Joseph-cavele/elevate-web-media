@@ -16,10 +16,13 @@ export function ContactPage (){
 
   const handleSubmit = async(e) => {
       e.preventDefault();
+      
+
+      
 
 
     try {
-      const res=await fetch(THANK_YOU_EMAIL_API,{
+      const res=await fetch("https://hook.us2.make.com/trdpx9hjwyjy3fjr1nli1lsfxbv3kiwo",{
         method:"POST",
         headers:{"Content-Type" :"application/json"},
         body:JSON.stringify(form)
@@ -31,7 +34,7 @@ export function ContactPage (){
            general: data.errors ? data.errors.join(", ") : data.message,
         })
 
-        return;
+        alert("data submitted successfully")
 
         
 
