@@ -16,9 +16,12 @@ import { ContactPage } from './Page/ContactPage';
 
 import { useEffect } from 'react';
 import { Notfound } from './Components/Sections/NotFound';
+import { TrackPage } from './hooks/Trackingpage';
 
 
  function App() {
+
+
     
 
   
@@ -26,7 +29,7 @@ import { Notfound } from './Components/Sections/NotFound';
   return (
 
     <BrowserRouter>
-    
+    <TrackPage/>
     <TopBar/>
     <Navbar/>
     
