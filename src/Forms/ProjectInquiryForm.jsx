@@ -93,6 +93,7 @@ export default function ProjectInquiry() {
     }
     setLoading(true);
     try {
+       
       const res = await fetch(PROJECTINQUIRY_API,
        
         {
@@ -101,7 +102,9 @@ export default function ProjectInquiry() {
           body: JSON.stringify(form),
         }
       );
+      
       const data = await res.json();
+      
       if (!res.ok) {
         setErrors({
           general: data.errors ? data.errors.join(", ") : data.message,
@@ -109,9 +112,16 @@ export default function ProjectInquiry() {
         return;
       }
       console.log(data)
+    
+    
       setSubmitted(true);
     } catch {
       setErrors({ general: "Something went wrong. Please try again." });
+      setTimeout(()=>{
+        setErrors("")
+      },2000)
+        
+      
     } finally {
       setLoading(false);
     }
